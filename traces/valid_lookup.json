@@ -1,0 +1,31 @@
+{
+  "source": "actual_gateway_execution",
+  "timestamp": "2026-10-13T10:44:23.293626+00:00",
+  "scenario": "valid_lookup",
+  "request_id": "evidence-lookup",
+  "tool_name": "order_lookup",
+  "role": "support",
+  "expected_status": "ok",
+  "actual_status": "ok",
+  "passed": true,
+  "result": {
+    "status": "ok",
+    "data": {
+      "found": true,
+      "order": {
+        "order_id": "ORD-1001",
+        "status": "processing"
+      }
+    },
+    "next_action": "none",
+    "events": [
+      {
+        "timestamp": "2026-10-13T10:44:23.293452+00:00",
+        "event": "tool.completed",
+        "request_id": "evidence-lookup",
+        "status": "ok",
+        "tool_name": "order_lookup"
+      }
+    ]
+  }
+}

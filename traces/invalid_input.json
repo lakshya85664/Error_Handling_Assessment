@@ -1,0 +1,25 @@
+{
+  "source": "actual_gateway_execution",
+  "timestamp": "2026-10-13T10:44:23.294501+00:00",
+  "scenario": "invalid_input",
+  "request_id": "evidence-invalid",
+  "tool_name": "order_lookup",
+  "role": "support",
+  "expected_status": "invalid",
+  "actual_status": "invalid",
+  "passed": true,
+  "result": {
+    "status": "invalid",
+    "data": {},
+    "next_action": "correct_arguments",
+    "events": [
+      {
+        "timestamp": "2026-10-13T10:44:23.294461+00:00",
+        "event": "tool.completed",
+        "request_id": "evidence-invalid",
+        "status": "invalid",
+        "tool_name": "order_lookup"
+      }
+    ]
+  }
+}

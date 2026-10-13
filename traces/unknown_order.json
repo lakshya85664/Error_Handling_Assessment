@@ -1,0 +1,28 @@
+{
+  "source": "actual_gateway_execution",
+  "timestamp": "2026-10-13T10:44:23.295619+00:00",
+  "scenario": "unknown_order",
+  "request_id": "evidence-missing",
+  "tool_name": "order_lookup",
+  "role": "support",
+  "expected_status": "not_found",
+  "actual_status": "not_found",
+  "passed": true,
+  "result": {
+    "status": "not_found",
+    "data": {
+      "found": false,
+      "order_id": "ORD-9999"
+    },
+    "next_action": "check_status",
+    "events": [
+      {
+        "timestamp": "2026-10-13T10:44:23.295568+00:00",
+        "event": "tool.completed",
+        "request_id": "evidence-missing",
+        "status": "not_found",
+        "tool_name": "order_lookup"
+      }
+    ]
+  }
+}

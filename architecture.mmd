@@ -1,0 +1,15 @@
+
+flowchart TD
+    A[Caller] --> B[ToolCall Contract]
+    B --> C[Tool Registry]
+    C --> D[Authorization Check]
+    D --> E[Rate Limiter]
+    E --> F[Pydantic Input Validation]
+    F --> G[Tool Gateway]
+    G --> H[Bounded Retry Logic]
+    H --> I[Fake Order Provider]
+    G --> J[Idempotency Store]
+    G --> K[Structured Event Logger]
+    K --> L[Redacted JSON Traces]
+    L --> M[Evidence Generator]
+    M --> N[Operator Report]

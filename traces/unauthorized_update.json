@@ -1,0 +1,25 @@
+{
+  "source": "actual_gateway_execution",
+  "timestamp": "2026-10-13T10:44:23.295024+00:00",
+  "scenario": "unauthorized_update",
+  "request_id": "evidence-denied",
+  "tool_name": "order_update",
+  "role": "support",
+  "expected_status": "denied",
+  "actual_status": "denied",
+  "passed": true,
+  "result": {
+    "status": "denied",
+    "data": {},
+    "next_action": "request_authorization",
+    "events": [
+      {
+        "timestamp": "2026-10-13T10:44:23.294987+00:00",
+        "event": "tool.completed",
+        "request_id": "evidence-denied",
+        "status": "denied",
+        "tool_name": "order_update"
+      }
+    ]
+  }
+}

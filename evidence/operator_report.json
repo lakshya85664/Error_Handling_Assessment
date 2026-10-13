@@ -1,0 +1,50 @@
+{
+  "project": "Tool Calling Engineering \u2014 Topic 6",
+  "generated_at": "2026-10-13T10:44:23.296118+00:00",
+  "pytest": {
+    "command": "python -m pytest -q",
+    "exit_code": 0,
+    "output_file": "evidence/full_test_output.txt"
+  },
+  "scenarios": [
+    {
+      "scenario": "valid_lookup",
+      "expected": "ok",
+      "actual": "ok",
+      "passed": true,
+      "trace": "traces\\valid_lookup.json"
+    },
+    {
+      "scenario": "invalid_input",
+      "expected": "invalid",
+      "actual": "invalid",
+      "passed": true,
+      "trace": "traces\\invalid_input.json"
+    },
+    {
+      "scenario": "unauthorized_update",
+      "expected": "denied",
+      "actual": "denied",
+      "passed": true,
+      "trace": "traces\\unauthorized_update.json"
+    },
+    {
+      "scenario": "unknown_order",
+      "expected": "not_found",
+      "actual": "not_found",
+      "passed": true,
+      "trace": "traces\\unknown_order.json"
+    }
+  ],
+  "scenario_count": 4,
+  "scenario_pass_count": 4,
+  "limitations": [
+    "All provider operations use a local fake provider.",
+    "Rate limiting and idempotency are in-memory and process-local.",
+    "The role is supplied to the gateway and is not authenticated by an identity provider.",
+    "Request IDs reused with different payloads are not detected.",
+    "The provider failure simulation does not enforce a real network timeout.",
+    "Retries are bounded but have no exponential backoff or jitter.",
+    "The evidence scenarios do not measure latency or load performance."
+  ]
+}
